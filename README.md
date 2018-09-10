@@ -6,7 +6,7 @@
 
 #### Clone repository manually
 ```
-$ git clone git@bitbucket.org:aurocraft/bkw-group.git
+$ git clone https://github.com/litashg/codeasg.git
 ```
 
 ## Manual installation
@@ -48,17 +48,17 @@ YII_ENV     = prod
 
 - Set DB configuration
 ```
-DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=bkw-group
+DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=codeas
 DB_USERNAME      = user
 DB_PASSWORD      = password
 ```
 
 - Set application canonical urls(for prod)
 ```
-FRONTEND_HOST_INFO    = http://bkw-group.com.ua
-BACKEND_HOST_INFO     = http://admin.bkw-group.com.ua
-STORAGE_HOST_INFP     = http://storage.bkw-group.com.ua
-API_HOST_INFO         = http://api.bkw-group.com.ua
+FRONTEND_HOST_INFO    = http://codeas.pro
+BACKEND_HOST_INFO     = http://admin.codeas.pro
+STORAGE_HOST_INFP     = http://storage.codeas.pro
+API_HOST_INFO         = http://api.codeas.pro
 ```
 4. Run
 ```
@@ -73,10 +73,10 @@ $ php console/yii rbac-migrate/up --interactive=0
 6. Extract(if you have) storage.tar.gz to project `storage` folder
 
 ### Nginx virtual hosts setup
-    - root path to main domain(bkw-group.com.ua) - frontend/web
-    - root path to admin domain(admin.bkw-group.com.ua) - backend/web
-    - root path to storage domain(storage.bkw-group.com.ua) - storage/web
-    - root path to storage domain(api.bkw-group.com.ua) - api/web
+    - root path to main domain(codeas.pro) - frontend/web
+    - root path to admin domain(admin.codeas.pro) - backend/web
+    - root path to storage domain(storage.codeas.pro) - storage/web
+    - root path to storage domain(api.codeas.pro) - api/web
 
 
 ## Console commands
