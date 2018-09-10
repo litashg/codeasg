@@ -1,0 +1,93 @@
+.c-company {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: calc(100% + 24px);
+    height: calc(100% + 48px);
+    background-color: $palette-light;
+    position: absolute;
+    left: -12px;
+    top: -24px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__logo {
+    height: 24px;
+    width: auto;
+    display: block;
+    margin-bottom: 16px;
+
+    transition: filter 0.3s, opacity 0.3s;
+    opacity: 1;
+    @include filter-greyscale(1);
+  }
+
+  &__title {
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    > * {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__badge {
+    display: block;
+    width: auto;
+    height: 24px;
+    padding: 0 8px;
+    background-color: rgba(#F1F3F7, 0.3);
+    border: 1px solid rgba($palette-line, 0.3);
+    @include font-style-note();
+    color: #7C8294;
+    line-height: 22px;
+    white-space: nowrap;
+    flex: none;
+
+    & + .c-company__badge {
+      margin-left: 8px;
+    }
+
+    &:last-of-type {
+      margin-right: 24px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: block;
+    padding-top: 26px;
+  }
+
+  &:hover {
+
+    .c-company__logo {
+      @include filter-greyscale(0);
+      opacity: 1;
+    }
+    &:before {
+      opacity: 1;
+    }
+  }
+}

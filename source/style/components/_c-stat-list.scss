@@ -1,0 +1,44 @@
+.c-stat-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__item {
+
+  }
+
+  &:not(.c-stat-list--widget) {
+    @include breakpoint-more-large-screen() {
+      .c-stat-list__item {
+        margin-bottom: 32px;
+
+        width: calc(33.33% - 44px);
+        margin-right: 66px;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+    @include breakpoint-across-small-large-laptop() {
+      .c-stat-list__item {
+        margin-bottom: 24px;
+
+        width: calc(33.33% - 22px);
+        margin-right: 33px;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &.c-stat-list--widget {
+    flex-direction: column;
+    width: 370px;
+
+    .c-stat-list__item {
+      width: 100%;
+    }
+  }
+}

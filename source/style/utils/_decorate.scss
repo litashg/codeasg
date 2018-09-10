@@ -1,0 +1,28 @@
+@mixin cover() {
+  background: {
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+    color: transparent;
+  };
+
+  @content;
+}
+
+@mixin contain() {
+  background: {
+    size: contain;
+    position: center;
+    repeat: no-repeat;
+    color: transparent;
+  };
+
+  @content;
+}
+
+
+@mixin filter-greyscale($value: 1) {
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=$value);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=$value);
+  filter: grayscale($value);
+}

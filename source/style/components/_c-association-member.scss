@@ -1,0 +1,16 @@
+.c-association-member {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-top: 14px;
+
+  .a-text-caption {
+    padding-right: 4px;
+  }
+  img {
+    height: 20px;
+  }
+}

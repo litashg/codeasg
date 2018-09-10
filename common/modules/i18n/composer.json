@@ -1,0 +1,9 @@
+{
+  "name": "aurocraft/i18n",
+  "require": {
+    "ext-intl": "*",
+
+    "codemix/yii2-localeurls": "^1.7",
+    "lav45/yii2-translated-behavior": "^1.4"
+  }
+}

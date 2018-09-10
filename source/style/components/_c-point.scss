@@ -1,0 +1,48 @@
+.c-point {
+  transform-origin: center center;
+  opacity: 0;
+  transform: scale(1);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+
+  animation: {
+    name: show-up;
+    duration: 0.7s;
+    delay: 0.6s;
+    fill-mode: forwards;
+  };
+
+  &__rect {
+
+    &--active {
+      fill: $palette-brand;
+    }
+    &--plan {
+      fill: $palette-grey;
+      stroke: $palette-brand;
+      stroke-width: 8px;
+    }
+  }
+
+  &__stripped {
+
+  }
+}
+
+@keyframes show-up {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

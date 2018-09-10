@@ -1,0 +1,147 @@
+.m-direction {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  padding: {
+    top: 160px;
+    bottom: 130px;
+  };
+
+  display: flex;
+  flex-direction: row;
+
+  &__back {
+    width: 20%;
+    padding-left: 3.6vw;
+    padding-top: 24px;
+
+    @include breakpoint-across-small-large-laptop() {
+      padding-top: 9px;
+    }
+    .c-back {
+      height: 48px;
+    }
+  }
+
+  &__wrapper {
+    width: 80%;
+  }
+
+  &__head {
+    width: 100%;
+    padding-bottom: 44px;
+  }
+
+  &__title {
+    padding-left: 96px;
+    position: relative;
+
+    @include breakpoint-across-small-large-laptop() {
+      padding-left: 70px;
+    }
+
+  }
+  &__title-icon {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 48px;
+    height: 48px;
+    display: block;
+
+    @include breakpoint-across-small-large-laptop() {
+      top: 8px;
+    }
+  }
+
+  &__body {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__main {
+    background-color: #F8F9FB;
+    width: 54%;
+    padding: 4.2% 6.3%;
+
+    @include breakpoint-across-small-large-laptop() {
+      padding: 40px 32px;
+    }
+  }
+  &__aside {
+    background-color: #F1F3F7;
+    width: 46%;
+    padding: 40px 24px;
+
+    @include breakpoint-across-small-large-laptop() {
+      padding: 40px 32px;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    max-width: 625px;
+    background-color: #F1F3F7;
+    padding: 24px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  &__button {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px 32px;
+
+    &:first-child {
+      align-items: flex-start;
+    }
+    &:last-child {
+      align-items: flex-end;
+    }
+
+    &:hover {
+      .c-link,
+      .c-back {
+        color: $palette-brand;
+      }
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid $palette-line;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+
+    @include breakpoint-across-small-large-laptop() {
+      font-size: 24px;
+    }
+  }
+
+  .m-stats {
+
+    &__body {
+      @include breakpoint-more-small() {
+        padding-top: 0;
+      }
+    }
+
+    .c-stat {
+      border-top: none;
+      border-bottom: 1px solid rgba(#B0B4BF, 0.3);
+
+      @include breakpoint-across-small-large-laptop() {
+        padding: 16px 0;
+      }
+    }
+  }
+
+}

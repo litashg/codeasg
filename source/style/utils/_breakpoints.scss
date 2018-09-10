@@ -1,0 +1,256 @@
+$breakpoints: (
+  mobile: 300px,
+  tablet: 768px,
+  small: 1025px,
+  default: 1200px,
+  large-laptop: 1300px,
+  large-screen: 1600px,
+  full-hd: 1920px
+);
+
+// Simple ranges
+@mixin breakpoint-mobile() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, mobile)) and
+  (max-width: map_get($breakpoints, tablet) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-tablet() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, tablet)) and
+  (max-width: map_get($breakpoints, small) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-small() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, small)) and
+  (max-width: map_get($breakpoints, default) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-default() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, default)) and
+  (max-width: map_get($breakpoints, large-laptop) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-large-laptop() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, large-laptop)) and
+  (max-width: map_get($breakpoints, large-screen) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-large-screen() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, large-screen)) and
+  (max-width: map_get($breakpoints, full-hd) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-full-hd() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, full-hd)) {
+    @content
+  }
+}
+
+// Across multiple viewports
+@mixin breakpoint-across-mobile-tablet() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, mobile)) and
+  (max-width: map_get($breakpoints, small) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-across-mobile-small() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, mobile)) and
+  (max-width: map_get($breakpoints, default) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-across-mobile-default() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, mobile)) and
+  (max-width: map_get($breakpoints, large-laptop) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-across-tablet-small() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, tablet)) and
+  (max-width: map_get($breakpoints, default) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-across-tablet-default() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, tablet)) and
+  (max-width: map_get($breakpoints, large-laptop) - 1px) {
+    @content
+  }
+}
+
+@mixin breakpoint-across-small-default() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, small)) and
+  (max-width: map_get($breakpoints, large-laptop) - 1px) {
+    @content
+  }
+}
+
+@mixin breakpoint-across-small-large-laptop() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, small)) and
+  (max-width: map_get($breakpoints, large-screen) - 1px) {
+    @content
+  }
+}
+
+@mixin breakpoint-across-tablet-large-laptop() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, tablet)) and
+  (max-width: map_get($breakpoints, large-screen) - 1px) {
+    @content
+  }
+}
+
+// More than
+@mixin breakpoint-more-mobile() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, mobile)){
+    @content
+  }
+}
+@mixin breakpoint-more-tablet() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, tablet)){
+    @content
+  }
+}
+@mixin breakpoint-more-small() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, small)){
+    @content
+  }
+}
+@mixin breakpoint-more-default() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, default)){
+    @content
+  }
+}
+@mixin breakpoint-more-large-laptop() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, large-laptop)){
+    @content
+  }
+}
+@mixin breakpoint-more-large-screen() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, large-screen)){
+    @content
+  }
+}
+@mixin breakpoint-more-full-hd() {
+  @media
+  all and
+  (min-width: map_get($breakpoints, full-hd)){
+    @content
+  }
+}
+
+// Less than mobile
+@mixin breakpoint-less-mobile() {
+  @media
+  all and
+  (max-width: map_get($breakpoints, mobile) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-less-tablet() {
+  @media
+  all and
+  (max-width: map_get($breakpoints, tablet) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-less-small() {
+  @media
+  all and
+  (max-width: map_get($breakpoints, small) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-less-default() {
+  @media
+  all and
+  (max-width: map_get($breakpoints, default) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-less-large-laptop() {
+  @media
+  all and
+  (max-width: map_get($breakpoints, large-laptop) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-less-large-screen() {
+  @media
+  all and
+  (max-width: map_get($breakpoints, large-screen) - 1px) {
+    @content
+  }
+}
+@mixin breakpoint-less-full-hd() {
+  @media
+  all and
+  (max-width: map_get($breakpoints, full-hd) - 1px) {
+    @content
+  }
+}
+
+// Orientation
+@mixin breakpoint-landscape() {
+  @media all and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin breakpoint-portrait() {
+  @media all and (orientation: portrait) {
+    @content;
+  }
+}
+// Special
+
+@mixin breakpoint-mobile-old-phones() {
+  @media all and (max-width: 340px) {
+    @content;
+  }
+}

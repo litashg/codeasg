@@ -1,0 +1,26 @@
+.a-color {
+
+  &-brand {
+    color: $palette-brand;
+  }
+  &-brand-second {
+    color: $palette-brand-second;
+  }
+
+  &-light {
+    color: $palette-text-light;
+  }
+  &-light-disabled {
+    color: $palette-light-disabled;
+  }
+  &-dark {
+    color: $palette-text-dark;
+  }
+  &-dark-soft {
+    color: rgba($palette-text-dark, 0.8);
+  }
+
+  &-dark-disabled {
+    color: $palette-dark-disabled;
+  }
+}

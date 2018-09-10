@@ -1,0 +1,11 @@
+.m-layout {
+  width: 100%;
+  height: auto;
+  &.theme-light {
+    background-color: #F1F3F7;
+  }
+
+  &.theme-dark {
+    background-color: #33394D;
+  }
+}

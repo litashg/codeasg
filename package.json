@@ -1,0 +1,65 @@
+{
+  "name": "bkw-group",
+  "version": "1.0.0",
+  "description": "# INSTALLATION",
+  "main": "",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development webpack -d --watch --config webpack.config.js",
+    "prod": "NODE_ENV=production webpack -p --config webpack.prod-config.js",
+    "styleguide:buid": "kss --config kss-config.json",
+    "styleguide:template": "node-sass --output-style compressed source/environment/styleguide-template/kss-assets/css/kss.scss source/environment/styleguide-template/kss-assets/css/kss.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://korchynskyy@bitbucket.org/aurocraft/bkw-group.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/aurocraft/bkw-group#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
+    "browserslist": "^4.0.1",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.0.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fs": "0.0.1-security",
+    "kss": "^3.0.0-beta.23",
+    "node-sass": "^4.9.2",
+    "path": "^0.12.7",
+    "postcss-flexbugs-fixes": "^4.0.0",
+    "postcss-loader": "^2.1.6",
+    "postcss-short": "^4.1.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^3.12.0",
+    "webpack-notifier": "^1.6.0",
+    "imports-loader": "^0.8.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.5",
+    "mobx": "^4.2.1",
+    "mobx-react": "^5.1.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.2.2",
+    "snapsvg": "^0.5.1",
+    "imagesloaded": "^4.1.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "IE 10"
+  ]
+}

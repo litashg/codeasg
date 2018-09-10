@@ -1,0 +1,121 @@
+.c-nav {
+  width: 64px;
+  height: auto;
+  display: block;
+  position: fixed;
+  z-index: 9;
+  right: 6.25vw;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  @include breakpoint-across-small-large-laptop() {
+    width: 48px;
+    right: 90px;
+  }
+
+  transition: {
+    duration: 0.4s;
+    property: opacity, transform;
+  };
+
+  &__item {
+    width: 64px;
+    height: 64px;
+    @include button-behaviour();
+
+    position: relative;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include breakpoint-across-small-large-laptop() {
+      width: 48px;
+      height: 48px;
+    }
+
+    &:before {
+      content: '';
+      width: 2px;
+      height: 48px;
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 15px;
+      transition: transform 0.3s;
+      transform-origin: center top;
+      transform: rotate(30deg) scale(1,0);
+      background-color: currentColor;
+      transition-delay: 0s;
+
+      @include breakpoint-across-small-large-laptop() {
+        height: 32px;
+      }
+    }
+
+
+    &.is-active,
+    &:hover {
+      color: $palette-text-light;
+
+      &:before {
+        transition-delay: 0.1s;
+        transform: rotate(30deg) scale(1,1);
+      }
+      .c-nav__label {
+        transition-delay: 0s;
+        @include breakpoint-more-large-screen() {
+          font-size: 24px;
+          transform: translateX(-26px);
+        }
+
+        @include breakpoint-across-small-large-laptop() {
+          transform: translateX(-15px);
+        }
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-family: $family-heading;
+    font-style: italic;
+    transition: {
+      duration: 0.3s;
+      property: transform, font-size;
+      delay: 0.1s;
+    };
+
+    @include breakpoint-across-small-large-laptop() {
+      font-size: 16px;
+    }
+  }
+
+ .theme-light & {
+    .c-nav__item {
+      color: $palette-dark-disabled;
+      &.is-active {
+        color: $palette-brand-second;
+      }
+    }
+  }
+  .theme-dark &{
+    .c-nav__item {
+      color: $palette-light-disabled;
+      &.is-active {
+        color: $palette-text-light;
+      }
+    }
+  }
+
+  .page-depth-inside & {
+    opacity: 0;
+    transform: translate(50px, -50%);
+    pointer-events: none;
+  }
+
+  .page-depth-error & {
+    @include visuallyhidden();
+  }
+}

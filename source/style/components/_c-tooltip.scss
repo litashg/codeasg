@@ -1,0 +1,42 @@
+.c-tooltip {
+  width: 320px;
+  height: auto;
+  padding: 16px 20px;
+
+  background-color: $palette-brand-second;
+  box-shadow: 0 72px 48px -26px rgba(28,37,62,0.32);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translate(-50%, calc(-100% - 20px));
+
+
+  &:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    left: calc(50% - 2px);
+    bottom: -7px;
+    background-color: $palette-brand-second;
+    transform: rotate(-45deg);
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font: {
+      family: $family-heading;
+      size: 16px;
+    };
+  }
+}

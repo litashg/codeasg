@@ -1,0 +1,26 @@
+.m-error {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(45deg, #1C253E 0%, #2C3248 100%);
+  padding: $content-top-space $content-sides-space;
+
+  &__content {
+    width: 100%;
+    max-width: 930px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .c-logo {
+    margin-bottom: 45px;
+  }
+}

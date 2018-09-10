@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1032px" height="89px" viewBox="0 0 1032 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>line-before</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Main-02-01" transform="translate(0.000000, -937.000000)">
+            <g id="timeline" transform="translate(0.000000, 780.000000)">
+                <g id="line-before" transform="translate(0.000000, 157.000000)">
+                    <path d="M0,4 L200,4 L245,49 L760.083183,49 L805.166367,88 L1028.8112,88" id="line" stroke="#B0B4BF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1,4" transform="translate(514.405601, 46.000000) scale(1, -1) translate(-514.405601, -46.000000) "></path>
+                    <rect id="dot" fill="#B0B4BF" x="1024" y="0" width="8" height="8"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

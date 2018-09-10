@@ -1,0 +1,19 @@
+.c-scroll {
+  width: 90px;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: auto;
+    flex: none;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-heading-bold();
+    font-size: $font-caption;
+  }
+}

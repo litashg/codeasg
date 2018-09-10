@@ -1,0 +1,123 @@
+$family-heading: "Georgia", "Times New Roman", serif;
+$family-text: "Roboto", sans-serif;
+
+$font-h1: 80px;
+$font-h2: 64px;
+$font-h3: 48px;
+$font-h4: 24px;
+
+$font-lead: 16px;
+$font-paragraph: 16px;
+
+$font-caption: 14px;
+$font-note: 14px;
+
+$font-decor: 300px;
+
+$weight-bold: 700;
+$weight-regular: 400;
+
+
+
+@mixin font-heading-regular() {
+  font: {
+    family: $family-heading;
+    weight: $weight-regular;
+  };
+}
+@mixin font-heading-bold() {
+  font: {
+    family: $family-heading;
+    weight: $weight-bold;
+  };
+}
+
+@mixin font-text-regular() {
+  font: {
+    family: $family-text;
+    weight: $weight-regular;
+  };
+}
+
+@mixin font-text-bold() {
+  font: {
+    family: $family-text;
+    weight: $weight-bold;
+  };
+}
+
+@mixin font-style-h1() {
+  @include font-heading-regular();
+  font-size: $font-h1;
+
+  @include breakpoint-across-small-large-laptop() {
+    font-size: $font-h2;
+  }
+}
+@mixin font-style-h2() {
+  @include font-heading-regular();
+  font-size: $font-h2;
+  line-height: (88/64);
+
+  @include breakpoint-across-small-large-laptop() {
+    font-size: $font-h3;
+  }
+}
+@mixin font-style-h3() {
+  @include font-heading-regular();
+  font-size: $font-h3;
+
+  @include breakpoint-across-small-large-laptop() {
+    font-size: $font-h4;
+  }
+}
+@mixin font-style-h4() {
+  @include font-heading-regular();
+  font-size: $font-h4;
+  line-height: (36/24);
+
+  @include breakpoint-across-small-large-laptop() {
+    font-size: $font-paragraph;
+  }
+}
+@mixin font-style-h4-alt() {
+  @include font-text-bold();
+  font-size: $font-h4;
+  line-height: (36/24);
+
+  @include breakpoint-across-small-large-laptop() {
+    font-size: $font-paragraph;
+  }
+}
+
+
+@mixin font-style-lead() {
+  @include font-text-bold();
+  font-size: $font-lead;
+}
+
+@mixin font-style-paragraph() {
+  @include font-text-regular();
+  font-size: $font-paragraph;
+  line-height: (28/16);
+
+  @include breakpoint-across-small-large-laptop() {
+    font-size: $font-caption;
+  }
+}
+
+@mixin font-style-caption() {
+  @include font-text-regular();
+  font-size: $font-caption;
+  line-height: (24/14);
+}
+@mixin font-style-note() {
+  @include font-text-regular();
+  font-size: $font-note;
+}
+
+@mixin font-style-decor() {
+  @include font-heading-regular();
+  font-size: $font-decor;
+  line-height: 0.8;
+}

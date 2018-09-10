@@ -1,0 +1,38 @@
+.c-button {
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+
+  font: {
+    family: $family-heading;
+    size: 18px;
+  };
+  color: #B0B4BF;
+  white-space: nowrap;
+
+  @include breakpoint-across-small-large-laptop() {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    color: $palette-dark;
+  }
+
+  &.is-active {
+    background-color: $palette-brand;
+    color: $palette-light;
+    pointer-events: none;
+  }
+
+  &.is-current {
+    background-color: $palette-brand;
+    color: $palette-light;
+  }
+}

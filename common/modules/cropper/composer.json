@@ -1,0 +1,8 @@
+{
+  "name": "aurocraft/cropper",
+  "require": {
+
+    "trntv/yii2-file-kit": "^1.3",
+    "bower-asset/cropper": "^3.1"
+  }
+}

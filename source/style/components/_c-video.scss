@@ -1,0 +1,30 @@
+.c-video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  @include object-cover();
+  background-color: #33394D;
+
+  mix-blend-mode: multiply;
+
+  &__fallback {
+    @include absolute-fill(1);
+  }
+  &__player {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    @include object-cover();
+  }
+
+  &:before {
+    content: '';
+    @include absolute-fill(9) {
+      pointer-events: none;
+    }
+    background: linear-gradient(-135deg, #161B2D 0%, #0C206D 100%);
+    opacity: 0.5;
+  }
+}

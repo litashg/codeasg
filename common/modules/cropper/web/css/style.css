@@ -1,0 +1,25 @@
+/* cropper */
+#crop-modal #preview-pane {
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  max-height: 220px;
+  max-width: 220px;
+}
+
+#crop-modal #preview-pane .preview-container {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  margin: auto;
+}
+
+#crop-modal img {
+  max-width: 100%;
+}
+#crop-modal .large {
+  width: 760px;
+}
+/* end cropper */

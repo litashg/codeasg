@@ -1,0 +1,57 @@
+.m-contacts {
+  width: 100%;
+  height: auto;
+  padding: {
+    top: 23vh;
+    left: $content-left-space;
+    right: $content-left-space;
+  };
+  overflow: hidden;
+
+
+  &__title {
+    position: relative;
+    z-index: 3;
+  }
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &__head {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+    padding: {
+      left: $content-right-space;
+      bottom: 36px;
+    };
+  }
+
+  &__content {
+    width: 100%;
+    height: auto;
+    background: $palette-light;
+
+    display: flex;
+    align-items: stretch;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  &__info {
+    width: 560px;
+    padding: $content-right-space;
+  }
+
+  &__map {
+    width: calc(100% - 560px);
+    background: $palette-grey;
+  }
+}

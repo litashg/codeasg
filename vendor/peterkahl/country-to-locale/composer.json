@@ -1,0 +1,24 @@
+{
+    "name": "peterkahl/country-to-locale",
+    "type": "library",
+    "description": "Converts country code to locale code.",
+    "keywords": ["locale", "localization", "language-code"],
+    "homepage": "https://github.com/peterkahl/Country-to-Locale",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Peter Kahl",
+            "email": "peter.kahl@colossalmind.com",
+            "homepage": "https://www.colossalmind.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "peterkahl\\locale\\": "src/"
+        }
+    }
+}

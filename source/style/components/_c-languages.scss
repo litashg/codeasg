@@ -1,0 +1,25 @@
+.c-languages {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__item {
+    font-size: 14px;
+    height: 1.7em;
+    line-height: 1.7em;
+    padding: 0 6px;
+
+    .theme-dark & {
+      color: $palette-light-disabled;
+    }
+    .theme-light & {
+      color: $palette-dark-disabled;
+    }
+
+    &.is-active {
+      color: $palette-brand;
+    }
+  }
+}

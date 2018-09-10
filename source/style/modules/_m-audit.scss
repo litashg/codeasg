@@ -1,0 +1,39 @@
+.m-audit {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+
+  padding: {
+    top: $content-top-space;
+    left: $content-left-space;
+    right: $content-left-space;
+    bottom: 80px;
+  };
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+  &__title {
+    margin-bottom: 55px;
+  }
+  &__footer {
+    max-width: 600px;
+    margin-top: auto;
+  }
+
+  &__body {
+    width: 100%;
+    height: auto;
+    margin-bottom: -24px;
+  }
+
+  @include breakpoint-across-small-large-laptop() {
+    padding-top: 100px;
+
+    &__title {
+      font-size: $font-h3;
+    }
+  }
+}

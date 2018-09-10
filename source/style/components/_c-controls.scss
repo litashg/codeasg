@@ -1,0 +1,62 @@
+.c-controls {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  @include button-behaviour();
+
+
+  &__item {
+    padding: 32px 32px 32px 46px;
+    border-left: 2px solid transparent;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &.is-active {
+      border-left-color: $palette-brand;
+
+      .a-text-h4 {
+        color: $palette-brand;
+      }
+      .c-controls__icon {
+        background-color: $palette-brand;
+      }
+    }
+
+    @include breakpoint-across-small-large-laptop() {
+      padding: 14px 12px 11px 26px;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    flex: none;
+    display: block;
+    background-color: #7C8294;
+
+    &--rect {
+
+    }
+    &--stripped {
+      background: {
+        image: url(/media/icons/icon-pattern.svg);
+        size: cover;
+        repeat: no-repeat;
+      }
+
+    }
+    &--circle {
+      border-radius: 50%;
+    }
+  }
+  &__content {
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+}

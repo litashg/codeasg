@@ -1,0 +1,23 @@
+.c-contact-info {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  &__group {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+  }
+}

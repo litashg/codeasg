@@ -1,0 +1,20 @@
+.c-badges {
+  width: auto;
+
+  display: flex;
+  align-items: center;
+
+  > *:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__item {
+    @include font-style-caption();
+    width: auto;
+    height: 28px;
+    padding: 0 8px;
+    line-height: 28px;
+    background-color: rgba(#B0B4BF, 0.3);
+    color: #7C8294;
+  }
+}

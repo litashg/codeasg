@@ -1,0 +1,113 @@
+.c-owner {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+
+  transition: {
+    duration: 0.7s;
+    property: left, transform;
+  };
+
+  &.is-active {
+    z-index: 5;
+
+    .c-picture {
+      box-shadow: 0 72px 48px -26px rgba(28,37,62,0.32);
+    }
+  }
+
+  &:not(.is-active) {
+    left: 40%;
+
+    .c-picture {
+      transform: scale(0.7);
+      @include filter-greyscale(1)
+    }
+
+    &:hover {
+      .c-picture {
+        @include filter-greyscale(0)
+      }
+    }
+
+    .c-owner__info {
+      @include visuallyhidden();
+    }
+  }
+
+  .c-picture {
+    transition: {
+      property: filter, transform, box-shadow;
+      duration: 0.4s;
+    }
+    transform-origin: right center;
+
+  }
+
+
+  &__info {
+    width: 100%;
+    min-width: 390px;
+    padding: 48px 24px 24px 16px;
+  }
+
+  &__quote {
+    color: rgba($palette-brand-second, 0.8);
+    font-style: italic;
+    padding: 0 0 6px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 54px;
+      height: 38px;
+      position: absolute;
+      left: -16px;
+      top: 0;
+      @include contain();
+      background-image: url("/media/icons/icon-quote.svg");
+      opacity: 0.3;
+      z-index: -1;
+      transform: translateY(-50%);
+    }
+
+
+    &:after {
+      content: "";
+      width: 112px;
+      height: 2px;
+      background-color: rgba($palette-dark-disabled, 0.3);
+      display: block;
+      margin-top: 24px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__social {
+    width: 24px;
+    height: 24px;
+    background: $palette-brand;
+    margin-left: 8px;
+    display: flex;
+    flex: none;
+
+    align-items: center;
+    justify-content: center;
+    color: $palette-light;
+
+    &:hover {
+      background: darken($palette-brand, 5%);
+    }
+  }
+}

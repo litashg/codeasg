@@ -1,0 +1,62 @@
+.m-structure {
+  $top-space: 10vh;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+
+  &__tabs {
+    width: 50%;
+    min-height: 100vh;
+    height: auto;
+    background-image: linear-gradient(45deg, #1C253E 0%, #2C3248 100%);
+
+    display: block;
+    padding: {
+      left: $content-left-space;
+      right: $content-right-space;
+      top: $top-space;
+      bottom: $top-space;
+    };
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 50%;
+    min-height: 100vh;
+    height: auto;
+    padding: $top-space $content-left-space $top-space 0;
+
+    .c-picture {
+      position: relative;
+      &:before {
+        content: '';
+        @include absolute-fill(5);
+        background-image: linear-gradient(-135deg, #161B2D 0%, #031559 100%);
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__label {
+    font: {
+      size: $font-decor;
+      family: $family-heading;
+    };
+    color: $palette-brand-second;
+    opacity: 0.5;
+
+    position: absolute;
+    left: $content-right-space;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+  }
+
+  .c-tabs {
+    position: relative;
+    z-index: 5;
+  }
+}

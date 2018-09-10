@@ -1,0 +1,56 @@
+.c-switch {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include button-behaviour();
+
+  &__label {
+    padding-left: 12px;
+    transition: color 0.3s;
+  }
+
+  &__button {
+    width: 32px;
+    height: 12px;
+    background-color: rgba(#B0B4BF, 0.3);
+    position: relative;
+
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 16px;
+      height: 16px;
+      border: 6px solid #7C8294;
+      background-color: #F1F3F7;
+      transition: transform 0.3s;
+    }
+  }
+
+  &.is-active {
+    .c-switch__button {
+      &:after {
+        transform: translateX(100%);
+        border-color: $palette-brand;
+      }
+    }
+    .c-switch__label {
+      color: $palette-brand;
+    }
+  }
+
+  &:not(.is-active) {
+    .c-switch__button {
+      &:after {
+        transform: translateX(0);
+        border-color: #7C8294;
+      }
+    }
+    .c-switch__label {
+      color: $palette-dark-disabled;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.c-back {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: $palette-brand;
+
+  flex-wrap: wrap;
+
+  &--disabled {
+    color: $palette-dark-disabled;
+  }
+
+  &__label {
+    font: {
+      family: $family-heading;
+      size: $font-lead;
+      weight: $weight-bold;
+    }
+  }
+
+  .a-icon-arrow-left {
+    font-size: 32px;
+    margin-right: 8px;
+    margin-top: 2px;
+  }
+}

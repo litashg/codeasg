@@ -1,0 +1,42 @@
+.m-history {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+
+  padding: {
+    top: 13vh;
+    left: 25vw;
+    right: $content-left-space;
+  };
+
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    width: 100%;
+    max-width: 960px;
+    position: relative;
+    padding-bottom: 200px;
+  }
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+
+  .c-back {
+    position: absolute;
+    left: -150px;
+    transform: translateX(-100%);
+    margin-top: 10px;
+
+    @include breakpoint-across-small-large-laptop() {
+      left: -79px;
+      margin-top: -3px;
+    }
+  }
+
+  .c-timeline {
+    max-width: 680px;
+  }
+}

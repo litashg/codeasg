@@ -1,0 +1,54 @@
+.a-text {
+  &-h1 {
+    @include font-style-h1();
+  }
+  &-h2 {
+    @include font-style-h2();
+    
+    @include breakpoint-mobile() {
+      font-size: 24px;
+    }
+  }
+  &-h3 {
+    @include font-style-h3();
+  }
+  &-h4 {
+    @include font-style-h4();
+  }
+  &-h4-alt {
+    @include font-style-h4-alt();
+  }
+  &-h5 {
+    @include font-style-h4();
+    font-size: $font-paragraph;
+  }
+
+  &-lead {
+    @include font-style-lead();
+  }
+
+  &-paragraph {
+    @include font-style-paragraph();
+  }
+
+  &-caption {
+    @include font-style-caption();
+  }
+
+  &-decor {
+    @include font-style-decor();
+    color: $palette-brand-second;
+    opacity: 0.5;
+    white-space: nowrap;
+    text-indent: -0.15ch;
+  }
+
+
+  &-italic {
+    font-style: italic;
+  }
+  &-upper {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
